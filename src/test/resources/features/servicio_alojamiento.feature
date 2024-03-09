@@ -8,7 +8,7 @@ Necesidad del negocio: Creación de un servicio de alojamiento
   Antecedentes: Ingresar a la pestaña de Stays
     Dado que el usuario se encuentra en la opción de Stays
 
-  @apk_booking
+  @apk_booking_1
   Escenario: [CP001] - Validar ingreso de los datos
     Cuando el usuario ingresa los datos para la búsqueda de su alojamiento "Cusco", "14 March 2024", "28 March 2024" y "5 years old"
     Entonces deberá visualizar la lista de resultados de alojamientos disponibles

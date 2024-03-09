@@ -65,9 +65,9 @@ automatización desarrollado.
 
 La ruta del pipeline se encuentra en: `.github/workflows/automated-testing-integration.yml`
 
-| develop                    | status                                                                                                                                                                                                                                                                                                 |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Pruebas de integración** | [![automated-testing-integration ST]([![automated-mobile-testing-integration](https://github.com/CAMIDIMAS18/booking-mobile-automation-testing/actions/workflows/automated-testing-integration.yml/badge.svg?branch=develop)](https://github.com/CAMIDIMAS18/booking-mobile-automation-testing/actions/workflows/automated-testing-integration.yml))](https://github.com/CAMIDIMAS18/booking-mobile-automation-testing/actions/workflows/automated-testing-integration.yml) |
+| develop                    | status                                                                                                                                                                                                                                                                                    |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Pruebas de integración** | [![automated-testing-integration ST](https://github.com/RobertoCarlos28/Yape_Examen_APP_Mobile/actions/workflows/automated-testing-integration.yml/badge.svg?branch=main)](https://github.com/RobertoCarlos28/Yape_Examen_APP_Mobile/actions/workflows/automated-testing-integration.yml) |
 
 **⏱️ Ejecución automatizada**:   
 El pipepile se ejecutará periódicamente de forma automática por medio la siguiente 'cron schedule expression':
@@ -94,7 +94,7 @@ Test diseñados para validar los escenarios **Happy Paths** 😃
 >
 > - [x] [CP003] - Validar el formulario de información del cliente
 >
-> - [x] [YP-004] - [CP004] - Validar medio de pago y finalizacion de la reserva
+> - [x] [CP004] - Validar medio de pago y finalizacion de la reserva
 ***
 Test diseñados para validar los escenarios **UNHappy Paths** 🤡
 

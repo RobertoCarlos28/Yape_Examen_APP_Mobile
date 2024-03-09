@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/features",
         glue = "booking.steps",
-        tags = "@TestException",
+        tags = "@apk_booking",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 public class TestRunner {
