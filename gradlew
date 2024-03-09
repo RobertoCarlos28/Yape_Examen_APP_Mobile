@@ -69,18 +69,18 @@ app_path=$0
 
 # Need this for daisy-chained symlinks.
 while
-    ANDROID_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
+    APP_HOME=${app_path%"${app_path##*/}"}  # leaves a trailing /; empty if no leading path
     [ -h "$app_path" ]
 do
     ls=$( ls -ld "$app_path" )
     link=${ls#*' -> '}
     case $link in             #(
       /*)   app_path=$link ;; #(
-      *)    app_path=$ANDROID_HOME$link ;;
+      *)    app_path=$APP_HOME$link ;;
     esac
 done
 
-ANDROID_HOME=$( cd "${ANDROID_HOME:-./}" && pwd -P ) || exit
+APP_HOME=$( cd "${APP_HOME:-./}" && pwd -P ) || exit
 
 APP_NAME="Gradle"
 APP_BASE_NAME=${0##*/}
