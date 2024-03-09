@@ -1,4 +1,4 @@
-name: automated-mobile-testing-integration
+name: proyecto_app_yape
 
 on:
   push:
