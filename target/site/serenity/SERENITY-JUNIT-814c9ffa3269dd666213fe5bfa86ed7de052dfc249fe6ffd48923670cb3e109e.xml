@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Funcionamiento del servicio de alojamiento" skipped="0" tests="1" time="30.25" timestamp="2024-03-08 09:48:20"><testcase name="[CP005] - Validar que no se permita buscar un alojamiento sin seleccionar una ciudad de destino"/></testsuite>

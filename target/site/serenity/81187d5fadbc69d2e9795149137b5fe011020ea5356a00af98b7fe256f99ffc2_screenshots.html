@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="f7ab84400228d927d540f00e22512665de3e0035815ac7cc247f0f53bf2b8fdd.html">Creaci&oacute;n De Un Servicio De Alojamiento</a></span>
+                > <span class="truncate-60"><a
+                    href="81187d5fadbc69d2e9795149137b5fe011020ea5356a00af98b7fe256f99ffc2.html"> </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-03-2024 21:20</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Creación De Un Servicio De Alojamiento </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario,<br />
+quiero utilizar el servicio de reservas,<br />
+para buscar una opción de alojamiento
+                                </div>
+                            </div>
+
+                            <div class="requirementNarrative">Background: Ingresar a la pestaña de Stays
+                                    <p></p>
+                            </div>
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="d6c397eea1620773cdfcac2e072f283528d2dc51715acb33161da75872d79aed.html">Apk Booking 2
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario se encuentra en la pantalla de ingreso "Cusco", "14 March 2024", "28 March 2024" y "5 years old"<br>Cuando el usuario ingresa sus datos personales en el formulario<br>Entonces valida la cantidad a pagar "&lt;Precio&gt;", fecha de inicio "&lt;Check-in&gt;" y fecha fin "&lt;Check-Out&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="51ab8cb9ba38be97e3916104d6450eeb7ba4579f8b241699c7e3993006f63fe9.png" title=" 1: [CP003] - Validar el formulario de informaci&oacute;n del cliente ({Precio=US$6,909, Check-in=Thu March 14 2024, Check-Out=Thu Mar 28 2024})" width="1080"/>
+                <img src="51ab8cb9ba38be97e3916104d6450eeb7ba4579f8b241699c7e3993006f63fe9.png" title=" Dado que el usuario se encuentra en la opci&oacute;n de Stays" width="1080"/>
+                <img src="51ab8cb9ba38be97e3916104d6450eeb7ba4579f8b241699c7e3993006f63fe9.png" title=" USUARIO opens the Booking app" width="1080"/>
+                <img src="51ab8cb9ba38be97e3916104d6450eeb7ba4579f8b241699c7e3993006f63fe9.png" title=" USUARIO clicks on button that closes the login window" width="1080"/>
+                <img src="4f3cd5c301295054f9532b769b87de72c0aa2a97c4bc675f083a040385d6f006.png" title=" USUARIO clicks on button that closes the login window (completed)" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" USUARIO opens the Booking app (completed)" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" USUARIO should see search fields for stays that is enabled" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" Data uploaded!" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" Dado que el usuario se encuentra en la opci&oacute;n de Stays (completed)" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" Dado que el usuario se encuentra en la pantalla de ingreso &quot;Cusco&quot;, &quot;14 March 2024&quot;, &quot;28 March 2024&quot; y &quot;5 years old&quot;" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" USUARIO enters-select search information" width="1080"/>
+                <img src="bdbd1f269c410d6a430832431e5ed2da2ed8f48aa73c88dbe4666b3bfe375888.png" title=" USUARIO clicks on option for accommodation destination" width="1080"/>
+                <img src="dd5b3895b786b4e8a8ed7483d4716bc4171c1250296d4eadfec71ad1ffa4ebb1.png" title=" USUARIO clicks on option for accommodation destination (completed)" width="1080"/>
+                <img src="2598096e6930d0393493e5b566e8b93430ff3e040717a4e51c1a25098e4f20cb.png" title=" USUARIO clicks on input search box for the accommodation destination" width="1080"/>
+                <img src="e190357c4b5677a6e6a7610d69b169df0722240673ad762345d7683d5939470d.png" title=" USUARIO clicks on input search box for the accommodation destination (completed)" width="1080"/>
+                <img src="e190357c4b5677a6e6a7610d69b169df0722240673ad762345d7683d5939470d.png" title=" USUARIO enters 'Cusco' into input search box for the accommodation destination" width="1080"/>
+                <img src="73b949ae3711fa60a0a081ce57e57c00f4b299fca524f14b8dd1166041426bcc.png" title=" USUARIO enters 'Cusco' into input search box for the accommodation destination (completed)" width="1080"/>
+                <img src="13c7a2cfe5dbd5399cca985c7c244b19dd7d531ba5d1c6d2eeaa6f44c057de95.png" title=" USUARIO clicks on CIUDAD of available accommodation" width="1080"/>
+                <img src="8e6b9b2f8ef6e8acb109568a0099c0204e2f3dfa2d49dceec73e06467395ae49.png" title=" USUARIO clicks on CIUDAD of available accommodation (completed)" width="1080"/>
+                <img src="8e6b9b2f8ef6e8acb109568a0099c0204e2f3dfa2d49dceec73e06467395ae49.png" title=" USUARIO clicks on calendar month list" width="1080"/>
+                <img src="46305b05344c24e9b462f2c2074fafc8625fc3d2768c5a3610e357e990152bdb.png" title=" USUARIO clicks on calendar month list (completed)" width="1080"/>
+                <img src="46305b05344c24e9b462f2c2074fafc8625fc3d2768c5a3610e357e990152bdb.png" title=" USUARIO clicks on start date of stay" width="1080"/>
+                <img src="8f11eba9168e491127fff6507ccb1186e21441ef7234641c51123247fe3188d0.png" title=" USUARIO clicks on start date of stay (completed)" width="1080"/>
+                <img src="8f11eba9168e491127fff6507ccb1186e21441ef7234641c51123247fe3188d0.png" title=" USUARIO clicks on end date of stay " width="1080"/>
+                <img src="4a9522d19e717a91b275083123893ba965a108d5c8c1b270b2ff6db5c9f6e0a1.png" title=" USUARIO clicks on end date of stay  (completed)" width="1080"/>
+                <img src="4a9522d19e717a91b275083123893ba965a108d5c8c1b270b2ff6db5c9f6e0a1.png" title=" USUARIO clicks on button confirm dates of stays" width="1080"/>
+                <img src="f72984379fed0ff1e14a6fe6a65342e9b1190e22ff7da1dfab173db890a56645.png" title=" USUARIO clicks on button confirm dates of stays (completed)" width="1080"/>
+                <img src="f72984379fed0ff1e14a6fe6a65342e9b1190e22ff7da1dfab173db890a56645.png" title=" USUARIO clicks on option for accommodation occupancy" width="1080"/>
+                <img src="cabb6035d424d68dced5890fb1fcb6684d7ed53b318384fa23a0101a672952bc.png" title=" USUARIO clicks on option for accommodation occupancy (completed)" width="1080"/>
+                <img src="cabb6035d424d68dced5890fb1fcb6684d7ed53b318384fa23a0101a672952bc.png" title=" USUARIO clicks on button select option children" width="1080"/>
+                <img src="9c124ad190094614343e40eeb96b148453cd4009472ff63a5ed07853d747b7ad.png" title=" USUARIO clicks on button select option children (completed)" width="1080"/>
+                <img src="76b9fbe5831368739b25ba8bb173152800e1ddf6764d04b7d6cde2e4fcf1ed48.png" title=" USUARIO clicks on button OK" width="1080"/>
+                <img src="bf943618516514d0346903f0c42c050c595eb4881195696221eadb05e2c0f6a6.png" title=" USUARIO clicks on button OK (completed)" width="1080"/>
+                <img src="82aae861d4370c1626f00d07d3ec7ed291df543eaa6ab52976561e9d585890ed.png" title=" USUARIO clicks on button confirm select rooms and guests" width="1080"/>
+                <img src="03019dc51fc42f4d79d491e53904c38e9f2d9948b72d8513bcd0891588d56015.png" title=" USUARIO clicks on button confirm select rooms and guests (completed)" width="1080"/>
+                <img src="03019dc51fc42f4d79d491e53904c38e9f2d9948b72d8513bcd0891588d56015.png" title=" USUARIO clicks on Botton search" width="1080"/>
+                <img src="c134e404f9b180e8f1f31ec2a6372cc08061d1a595af696d9ff92824b822c229.png" title=" USUARIO clicks on Botton search (completed)" width="1080"/>
+                <img src="eb5a539f74563b7cde0fc053e2775d50abef297dc3003ba07d34e84c8ac48586.png" title=" USUARIO enters-select search information (completed)" width="1080"/>
+                <img src="601522c93926927b39c404247d578cb2882603351abc4780dd4828f5d8eaf791.png" title=" USUARIO clicks on result booking with name" width="1080"/>
+                <img src="023d56cc1b6817d11cbb529775a9505cf6ec24707515b2da529fc9ca68a11ad5.png" title=" USUARIO clicks on result booking with name (completed)" width="1080"/>
+                <img src="023d56cc1b6817d11cbb529775a9505cf6ec24707515b2da529fc9ca68a11ad5.png" title=" USUARIO select-reserve the room" width="1080"/>
+                <img src="ac0e1b253728461328ba3f814faca5807d7044dce50fa2d9e5fd29e86119a2fe.png" title=" USUARIO clicks on button select rooms" width="1080"/>
+                <img src="b19a0c68874327126a49b56182bd6a354f1efefeb7bf2efe33f0f4d5919df653.png" title=" USUARIO clicks on button select rooms (completed)" width="1080"/>
+                <img src="728288bf09be2877fe29542429bdd5db3b0f2b2172146117fec0d2e2aeea000a.png" title=" Then the text obtained from the price total information -  should be a string containing 'US$7,779'" width="1080"/>
+                <img src="4c2a1558e2363261cf93a92fc0113dd793ee50c132c6cd2b27435b4bb18c2329.png" title=" Then the text obtained from the price total information -  should be a string containing 'US$7,779' (completed)" width="1080"/>
+                <img src="4c2a1558e2363261cf93a92fc0113dd793ee50c132c6cd2b27435b4bb18c2329.png" title=" USUARIO clicks on button reserve this option" width="1080"/>
+                <img src="c03fa9379f354616d7eaa9584b1e24b2339f0f919ddb4105f6e31ff139302c8b.png" title=" USUARIO clicks on button reserve this option (completed)" width="1080"/>
+                <img src="28307df81306d4f52b610ed5b3cd80d6df91f89d16b38d581e9e497fb6c2866a.png" title=" USUARIO select-reserve the room (completed)" width="1080"/>
+                <img src="28307df81306d4f52b610ed5b3cd80d6df91f89d16b38d581e9e497fb6c2866a.png" title=" Then the text box for first name is enabled -  should be (true)" width="1080"/>
+                <img src="28307df81306d4f52b610ed5b3cd80d6df91f89d16b38d581e9e497fb6c2866a.png" title=" Dado que el usuario se encuentra en la pantalla de ingreso &quot;Cusco&quot;, &quot;14 March 2024&quot;, &quot;28 March 2024&quot; y &quot;5 years old&quot; (completed)" width="1080"/>
+                <img src="28307df81306d4f52b610ed5b3cd80d6df91f89d16b38d581e9e497fb6c2866a.png" title=" Cuando el usuario ingresa sus datos personales en el formulario" width="1080"/>
+                <img src="28307df81306d4f52b610ed5b3cd80d6df91f89d16b38d581e9e497fb6c2866a.png" title=" USUARIO fill in your info" width="1080"/>
+                <img src="28307df81306d4f52b610ed5b3cd80d6df91f89d16b38d581e9e497fb6c2866a.png" title=" USUARIO clicks on text box for first name" width="1080"/>
+                <img src="64585a0b30288ae4c6951f411eeed6d892265dfda75fb9f9f2b3198dccfdd611.png" title=" USUARIO clicks on text box for first name (completed)" width="1080"/>
+                <img src="64585a0b30288ae4c6951f411eeed6d892265dfda75fb9f9f2b3198dccfdd611.png" title=" USUARIO enters 'Roberto' into text box for first name" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO enters 'Roberto' into text box for first name (completed)" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO clicks on text box for last name" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO enters 'Mechan' into text box for last name" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO clicks on text box for email" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO enters 'rmechanc@gmail.com' into text box for email" width="1080"/>
+                <img src="20c402d748d7535a9f271f351560fe9a2d5e433624a00d7ce7ed250038c5800e.png" title=" USUARIO clicks on text box for direccion" width="1080"/>
+                <img src="8395acc4c616fd1279c5edf6962af05ae8997d9fc538a3aba1836639e43e68de.png" title=" USUARIO clicks on text box for direccion (completed)" width="1080"/>
+                <img src="8395acc4c616fd1279c5edf6962af05ae8997d9fc538a3aba1836639e43e68de.png" title=" USUARIO enters 'Av Amarantos 208' into text box for direccion" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO enters 'Av Amarantos 208' into text box for direccion (completed)" width="1080"/>
+                <img src="fefffebc80057c4a8e8c0e8f7651a48f83f2bb750942c15c9c2df2aebb7af20e.png" title=" USUARIO clicks on text box for zip code" width="1080"/>
+                <img src="b45937627e7325d694710e05505ea8bdddbfeb047072261251aa597fa9dbb54d.png" title=" USUARIO clicks on text box for zip code (completed)" width="1080"/>
+                <img src="b45937627e7325d694710e05505ea8bdddbfeb047072261251aa597fa9dbb54d.png" title=" USUARIO enters '111999' into text box for zip code" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO enters '111999' into text box for zip code (completed)" width="1080"/>
+                <img src="936290821169cc204ece764e9117b065636303115e2bb96bd9fa23ef631ff104.png" title=" USUARIO clicks on text box for ciudad" width="1080"/>
+                <img src="c7ea0c9bf4cc5b8a3efda63262f677294cf99579590bfd26229210f56d86eb41.png" title=" USUARIO clicks on text box for ciudad (completed)" width="1080"/>
+                <img src="c7ea0c9bf4cc5b8a3efda63262f677294cf99579590bfd26229210f56d86eb41.png" title=" USUARIO enters 'Chiclayo' into text box for ciudad" width="1080"/>
+                <img src="c8ce5d5d1fe07df5e6113a758db71c86eb26f1f80efc88edaaa6358298fec67e.png" title=" USUARIO enters 'Chiclayo' into text box for ciudad (completed)" width="1080"/>
+                <img src="b5cc3090c2cc6724bfa717c5092ced3f9866c4c99da1a845dfba67e31fe509ea.png" title=" USUARIO clicks on text box for country/region" width="1080"/>
+                <img src="f08764c396ced806b77e075067a64356e8fcf72771ed2b4dd8495dc9eb562e5d.png" title=" USUARIO clicks on text box for country/region (completed)" width="1080"/>
+                <img src="f08764c396ced806b77e075067a64356e8fcf72771ed2b4dd8495dc9eb562e5d.png" title=" USUARIO clears field text box for country/region" width="1080"/>
+                <img src="0959cb0baed32edc318547b0a5e2d4ccd559d0035d97071a5440cd7ed733ecce.png" title=" USUARIO clears field text box for country/region (completed)" width="1080"/>
+                <img src="0959cb0baed32edc318547b0a5e2d4ccd559d0035d97071a5440cd7ed733ecce.png" title=" USUARIO enters 'Peru' into text box for country/region" width="1080"/>
+                <img src="bb7913785288457283fb9be408f8cb86a0daa230d69cdde8e31a90cbd6976e12.png" title=" USUARIO enters 'Peru' into text box for country/region (completed)" width="1080"/>
+                <img src="665e4420495d972923d066be996b7dc5365f7683fd5054662f9996950cc850f9.png" title=" USUARIO clicks on text box for mobile telefono" width="1080"/>
+                <img src="0019b0fa6c8cee24a7d7aed376e13838dcaf29018020f97d735aa3b43238d36d.png" title=" USUARIO clicks on text box for mobile telefono (completed)" width="1080"/>
+                <img src="0019b0fa6c8cee24a7d7aed376e13838dcaf29018020f97d735aa3b43238d36d.png" title=" USUARIO clears field text box for mobile telefono" width="1080"/>
+                <img src="0072c63ceadab2c53d1a0094c837a1817a172126571ad9476d6ac7bf1473dde8.png" title=" USUARIO clears field text box for mobile telefono (completed)" width="1080"/>
+                <img src="0072c63ceadab2c53d1a0094c837a1817a172126571ad9476d6ac7bf1473dde8.png" title=" USUARIO enters '942337396' into text box for mobile telefono" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" USUARIO clicks on radio button leisure" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" Then the text obtained from the label with the PRECIO total -  should be a string containing 'US$7,779'" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" USUARIO clicks on button next step" width="1080"/>
+                <img src="7a3869821d6c4e3e09f85834f39e440a0842a9073fa4a6e61d5b8cf863d013dd.png" title=" USUARIO clicks on button next step (completed)" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" USUARIO fill in your info (completed)" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" Cuando el usuario ingresa sus datos personales en el formulario (completed)" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" Entonces valida la cantidad a pagar &quot;US$6,909&quot;, fecha de inicio &quot;Thu March 14 2024&quot; y fecha fin &quot;Thu Mar 28 2024&quot;" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" USUARIO validates your reservation information" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" Then the text obtained from the label with the summary total precio value -  should be a string containing 'US$7,779'" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" Then the text obtained from the label with the check-in date select -  should be a string containing 'Thu Mar 14 2024'" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" Then the text obtained from the label with the check-out date select -  should be a string containing 'Thu Mar 28 2024'" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" USUARIO clicks on button final step" width="1080"/>
+                <img src="e677d4e35d465fc486bf18689f2900ffa884805edc3638c7d06e81c454c3888e.png" title=" USUARIO clicks on button final step (completed)" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" USUARIO clicks on button final step" width="1080"/>
+                <img src="d5dbaa7dbb76a83c0d78c9cceae4a98a66c364dea9c381c93bfd6d2f0c4ff6ee.png" title=" 1: [CP003] - Validar el formulario de informaci&oacute;n del cliente ({Precio=US$6,909, Check-in=Thu March 14 2024, Check-Out=Thu Mar 28 2024}) (completed): <span class='success-color'>SUCCESS</span>" width="1080"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.10</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Creación de un servicio de alojamiento","[CP001] - Validar ingreso de los datos","SUCCESS","2024-03-08T15:27:41.743683-05:00[America/Lima]","0.0","89.39"
+"Creación de un servicio de alojamiento","[CP003] - Validar el formulario de información del cliente","SUCCESS","2024-03-08T21:20:51.113465-05:00[America/Lima]","0.0","172.32"
+"Creación de un servicio de alojamiento","[CP004] - Validar medio de pago y finalizacion de la reserva","SUCCESS","2024-03-08T21:34:44.447742-05:00[America/Lima]","0.0","221.93"
+"Funcionamiento del servicio de alojamiento","[CP005] - Validar que no se permita buscar un alojamiento sin seleccionar una ciudad de destino","SUCCESS","2024-03-08T21:48:20.218385-05:00[America/Lima]","0.0","30.25"
